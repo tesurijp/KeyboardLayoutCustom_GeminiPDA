@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tesuri.geminicustomkeyboard">
+
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="26" />
+
+
+    <application android:allowBackup="true" android:label="tesuri Custom Gemini Keyboard (US)" >
+       <receiver android:name=".InputDeviceReceiver"
+            android:label="Custom Gemini Keyboard (US)">
+            <intent-filter>
+                <action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS" />
+            </intent-filter>
+			    <meta-data android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS" android:resource="@xml/keyboard_layouts" />
+        </receiver>
+    </application>
+</manifest>
