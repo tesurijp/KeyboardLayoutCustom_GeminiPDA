@@ -8,3 +8,5 @@ build
 release
 /captures
 .externalNativeBuild
+gradlew
+gradlew.bat
